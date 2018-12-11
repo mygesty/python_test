@@ -1,7 +1,9 @@
 
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*
+# from fake_useragent import UserAgent
+# from  logging import getLogger
 
-# Scrapy settings for cat project
+# Scrapy settings for cat projectL
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,18 +11,21 @@
 #     https://doc.scrapy.org/en/latest/topics/settings.html
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-IMAGES_STORE = './images'
+IMAGES_STORE = './images1'
 BOT_NAME = 'cat'
 
 SPIDER_MODULES = ['cat.spiders']
 NEWSPIDER_MODULE = 'cat.spiders'
 
+# ua = UserAgent()
+# logger = getLogger(__name__)
+# logger.warning(ua.random)
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'cat (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -53,9 +58,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
+# DOWNLOADER_MIDDLEWARES = {
 #    'cat.middlewares.CatDownloaderMiddleware': 543,
-#}
+# }
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -87,3 +92,9 @@ ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+REDIS_HOST = '114.116.123.62'
+REDIS_PORT = 6379

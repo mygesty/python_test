@@ -2,6 +2,7 @@
 import scrapy
 from ..items import CatItem
 
+
 class CatCrawlSpider(scrapy.Spider):
     name = 'cat_crawl'
     allowed_domains = ['placekitten.com/g/']
@@ -12,7 +13,8 @@ class CatCrawlSpider(scrapy.Spider):
         link = response.xpath('//pre/a/@href').re(r'(\d.*)/')
         url = []
         for i in link:
-            url.append(self.base_url+i+'/'+i)
+            i = self.base_url+i+'/'+i
+            url.append(i)
         item = CatItem()
         item['image_urls'] = url
         yield item
