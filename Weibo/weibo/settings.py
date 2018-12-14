@@ -64,9 +64,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'weibo.pipelines.WeiboPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'weibo.pipelines.MongoPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -92,9 +92,9 @@ DOWNLOADER_MIDDLEWARES = {
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
-REDIS_HOST = 'localhost'
+REDIS_HOST = '114.116.123.62'
 REDIS_PORT = 6379
 
-# MONGO_HOST = 'localhost'
-# MONGO_PORT = 27017
-# MONGO_DB = 'weibo'
+MONGO_HOST = '114.116.123.62'
+MONGO_PORT = 27017
+MONGO_DB = 'weibo'
