@@ -29,9 +29,11 @@ class WeiboCrawlSpider(scrapy.Spider):
         id = result.get('id')
         follow_page = result.get('follow_count') // 20
         fans_page = result.get('followers_count') // 20
-        for i in fans_page:
+        for i in range(fans_page):
+            i += 1
             yield Request(url=self.fans_url.format(uid=id, page=i), callback=self.parse_fan)
-        for i in follow_page:
+        for i in range(follow_page):
+            i += 1
             yield Request(url=self.follows_url.format(uid=id, page=i), callback=self.parse_follower)
 
     def parse_fan(self, response):
