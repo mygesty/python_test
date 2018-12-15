@@ -10,8 +10,8 @@ class WeiboCrawlSpider(scrapy.Spider):
     allowed_domains = ['m.weibo.cn']
     start_id = ['1662068793']
     user_url = 'https://m.weibo.cn/profile/info?uid={uid}'
-    follows_url = ['https://m.weibo.cn/api/container/getIndex?containerid=231051_-_followers_-_{uid}&page={page}']
-    fans_url = ['https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_{uid}&since_id={page}']
+    follows_url = 'https://m.weibo.cn/api/container/getIndex?containerid=231051_-_followers_-_{uid}&page={page}'
+    fans_url = 'https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_{uid}&since_id={page}'
 
     def start_requests(self):
         for i in self.start_id:
