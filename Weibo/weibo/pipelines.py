@@ -14,9 +14,9 @@ class MongoPipeline(object):
         self.mongo_db = mongo_db
 
     @classmethod
-    def from_crawl(cls, crawler):
-        return cls(mongo_url=crawler.setting.MONGO_HOST, mongo_port=crawler.setting.MONGO_PROT,
-                   mongo_db=crawler.setting.MONGO_DB)
+    def from_crawler(cls, crawler):
+        return cls(mongo_url=crawler.settings.get('MONGO_HOST'), mongo_port=crawler.settings.get('MONGO_PORT'),
+                   mongo_db=crawler.settings.get('MONGO_DB'))
 
     def open_spider(self, spider):
         self.client = pymongo.MongoClient(host=self.mongo_url, port=self.mongo_port)
