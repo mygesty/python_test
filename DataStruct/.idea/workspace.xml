@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="934562b5-5e07-4ed0-8a51-91b51339f60b" name="Default Changelist" comment="sort" />
+    <list default="true" id="934562b5-5e07-4ed0-8a51-91b51339f60b" name="Default Changelist" comment="sort">
+      <change afterPath="$PROJECT_DIR$/tree.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,20 +11,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sort.py">
+        <entry file="file://$PROJECT_DIR$/tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="77" column="43" lean-forward="true" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
-              <folding>
-                <element signature="e#75#93#0" />
-                <element signature="e#125#372#0" />
-                <element signature="e#404#690#0" />
-                <element signature="e#723#1040#0" />
-                <element signature="e#1071#1381#0" />
-                <element signature="e#1425#1913#0" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -44,6 +38,7 @@
       <list>
         <option value="$PROJECT_DIR$/bubble.py" />
         <option value="$PROJECT_DIR$/sort.py" />
+        <option value="$PROJECT_DIR$/tree.py" />
       </list>
     </option>
   </component>
@@ -105,6 +100,7 @@
       <workItem from="1544756682846" duration="6189000" />
       <workItem from="1544782699985" duration="4992000" />
       <workItem from="1544787719530" duration="3376000" />
+      <workItem from="1544936942338" duration="8160000" />
     </task>
     <task id="LOCAL-00001" summary="sort">
       <created>1544787248926</created>
@@ -124,7 +120,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22136000" />
+    <option name="totallyTimeSpent" value="30296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -137,6 +133,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -153,7 +150,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32923076" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.22307692" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.29384616" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -174,7 +171,7 @@
     <entry file="file://$PROJECT_DIR$/sort.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="77" column="43" lean-forward="true" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
           <folding>
             <element signature="e#75#93#0" />
             <element signature="e#125#372#0" />
@@ -183,6 +180,13 @@
             <element signature="e#1071#1381#0" />
             <element signature="e#1425#1913#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
