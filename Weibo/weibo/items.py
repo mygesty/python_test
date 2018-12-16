@@ -15,7 +15,7 @@ class UserItem(scrapy.Item):
     statuses_count = scrapy.Field()
     verified = scrapy.Field()
     screen_name = scrapy.Field()
-    id = scrapy.Field()
+    _id = scrapy.Field()
 
 class FanItem(scrapy.Item):
     fan_id = scrapy.Field()

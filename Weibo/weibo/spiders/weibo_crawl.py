@@ -26,7 +26,7 @@ class WeiboCrawlSpider(scrapy.Spider):
         for key, value in user_info.items():
             useritem[key] = result.get(value)
         yield useritem
-        id = result.get('id')
+        _id = result.get('id')
         follow_page = result.get('follow_count') // 20
         fans_page = result.get('followers_count') // 20
         for i in range(fans_page):
