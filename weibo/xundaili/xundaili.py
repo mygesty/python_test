@@ -12,13 +12,14 @@ class RedisClient(object):
         if self.db.scard('proxy') == 0:
             proxies = []
             proxy_url = 'http://api.xdaili.cn/xdaili-api//greatRecharge/getGreatIp?' \
-                        'spiderId=adb08076e78e44c8847b0fca36118ead&orderno=YZ201812110025' \
-                        't1mlPQ&returnType=2&count=20'
-            result = json.loads(requests.get(proxy_url).text).get('RESULT')
-            for i in result:
-                proxies.append('http://' + i.get('ip') + ':' + i.get('port'))
-            self.proxy = proxies
-            self.add()
+                        'spiderId=adb08076e78e44c8847b0fca36118ead&orderno=YZ201812113464RLejdX&' \
+                        'returnType=2&count=20'
+            for i in range(50):
+                result = json.loads(requests.get(proxy_url).text).get('RESULT')
+                for j in result:
+                    proxies.append('http://' + j.get('ip') + ':' + j.get('port'))
+                self.proxy = proxies
+                self.add()
 
     def add(self):
         for i in self.proxy:
